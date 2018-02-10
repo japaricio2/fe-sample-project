@@ -1,0 +1,19 @@
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+ul {
+  margin: 0;
+}
+
+.navbar {
+  background-color: #0a00d0;
+}
+
+.nav-button {
+  color: white;
+  font-size: 1.48rem;
+  text-decoration: none;
+  display: block;
+  padding: 2px 12px 2px 12px;
+}
