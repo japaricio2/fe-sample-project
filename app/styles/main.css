@@ -1,10 +1,106 @@
-/* CSS BLURR */
+/* GLOBAL STYLES */
+html {
+  font-family: 'Lato', sans-serif;
+  color: #555555;
+  box-sizing: border-box;
+  font-weight: 100;
+  font-size: 1.3rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+i {
+  padding-right: 6px;
+}
+/* GLOBAL STYLES */
+
+
+/* NAVBAR STYLES*/
+.navbar {
+  background-color: #0a00d0;
+  height: 140px;
+  padding-top: 12px;
+}
+
+.nav-button {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: block;
+  padding: 2px 12px 2px 12px;
+  margin-bottom: 10px;
+}
+
+.nav-button-brand {
+  font-weight: 400;
+}
+
+.nav-button-underline {
+  text-decoration: underline;
+}
+/* NAVBAR STYLES*/
+
+
+#item-count-button {
+  width: 42px;
+  border-radius: 6px;
+  height: 33px;
+  color: #0a00d0;
+  background-color: white;
+}
+
+.page-title {
+  color: #494949;
+  margin-left: 22px;
+  font-size: 1.6rem;
+}
+
+.collection {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 .collection-blurred {
   filter: blur(80px);
   background-color: rgb(255, 255, 255);
 }
 
-/* CART CSS */
+.item {
+  width: 86%;
+  margin-bottom: 32px;
+  box-shadow: 0px 0px 8px #9c9c9c82;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* CART STYLES */
+.cart-button {
+  width: 8rem;
+  height: 1.72rem;
+  background-color: #FFF;
+  color: #9C9C9C;
+  border-radius: 6px;
+  border: solid #9c9c9c82 2px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 100;
+}
+
 .container-cart {
   display: flex;
   align-items: center;
@@ -29,12 +125,12 @@
   text-align: center;
   font-size: 1rem;
 }
+
 .cart-item {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   margin-bottom: 14px;
-
 }
 
 .cart-item-info {
@@ -63,130 +159,34 @@
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-
-html {
-  font-family: 'Lato', sans-serif;
-  color: #555555;
-  box-sizing: border-box;
-  font-weight: 100;
-  font-size: 1.3rem;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-i {
-  padding-right: 6px;
-}
-
-.collection {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
-.navbar {
-  background-color: #0a00d0;
-  height: 140px;
-  padding-top: 12px;
-}
-
-.nav-button {
-  color: white;
-  font-size: 1.3rem;
-  text-decoration: none;
-  display: block;
-  padding: 2px 12px 2px 12px;
-  margin-bottom: 10px;
-}
-
-.nav-button-brand {
-  font-weight: 400;
-}
-
-.nav-button-underline {
-  text-decoration: underline;
-}
-
-#item-count-button {
-  width: 42px;
-  border-radius: 6px;
-  height: 33px;
-  color: #0a00d0;
-  background-color: white;
-}
-
-.page-title {
-  color: #494949;
-  margin-left: 22px;
-  font-size: 1.6rem;
-}
-
-.item {
-  width: 86%;
-  margin-bottom: 32px;
-  box-shadow: 0px 0px 8px #9c9c9c82; 
-  border-radius: 3px;
-  text-align: center;
-}
-
-.button-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-.cart-button {
-  width: 8rem;
-  height: 1.72rem;
-  background-color: #FFF;
-  color: #9C9C9C;
-  border-radius: 6px;
-  border: solid #9c9c9c82 2px;
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: 100;
-}
+/* CART CSS */
 
 @media screen and (min-width: 480px) {
   .navbar {
     height: 48px;
   }
-
   .navbar-left {
     width: 64%;
     display: inline-block;
     float: left;
   }
-  
-  .navbar-right  {
+  .navbar-right {
     width: 36%;
     display: inline-block;
     float: left;
   }
-
   #cart {
     position: absolute;
     right: 20px;
   }
-
   .item {
     width: 46%;
     margin: auto;
-    margin-bottom: 22px; 
+    margin-bottom: 22px;
   }
-
   .item-info {
     margin: .32rem;
   }
-
   .nav-button {
     display: inline-block;
   }
@@ -196,9 +196,8 @@ i {
   .item {
     width: 32%;
     margin: auto;
-    margin-bottom: 22px; 
+    margin-bottom: 22px;
   }
-
   .cart-button {
     height: 2.3rem;
     width: 9rem;
@@ -213,7 +212,6 @@ i {
   .item {
     width: 23%;
     margin: auto;
-    margin-bottom: 22px; 
+    margin-bottom: 22px;
   }
 }
-
