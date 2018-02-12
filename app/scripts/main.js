@@ -1,3 +1,4 @@
+// lets pretend this is the payload of an ajax call
 var payload = {
   "products": [{
       "filename": "618328744.png",
@@ -57,7 +58,7 @@ var payload = {
   ]
 };
 
-// assuming price will stay under $100
+// assuming price will stay under $100 per item
 var toCurrency = function (amount) {
   var cents = amount.substring(amount.length - 2, amount.length);
   var dollars = amount.substring(0, amount.length - 2);
@@ -66,7 +67,7 @@ var toCurrency = function (amount) {
   return amount;
 }
 
-
+// takes an item and it's id and creates HTML to add to collection view
 var buildItem = function (item, key) {
   var element = "";
   item.filename = imgSrc = "../images/" + item.filename;
@@ -114,6 +115,8 @@ var displayCart = function () {
 var userCart = [];
 
 var updateCartTotal = function() {
+  var cartPrice = document.getElementById('cart-price');
+  
   var total = 0;
   var itemDollars = 0;
   var itemCents = 0;
@@ -128,14 +131,32 @@ var updateCartTotal = function() {
     itemDollars += parseInt(price.substring(0, price.length - 2));
   });
 
-  return '$' + itemDollars + '.' + itemCents;
+  cartPrice.innerHTML = '$' + itemDollars + '.' + itemCents;
 }
 
 var updateCartCount = function() {
-  return userCart.length;
+  var itemCount = document.getElementById('item-count');
+  itemCount.innerHTML = userCart.length;
 }
 
-var addToCartView = function (cartItem) {
+var rebuildCartView = function() {
+  var cart = document.getElementById('app-cart-items');
+  cart.innerHTML = '';
+  userCart.forEach(function(item) {
+    addToCartView(item);
+  });
+  updateCartTotal();
+}
+var removeFromCart = function(button) {
+  console.log(button.value);
+  userCart.splice(button.value, 1);
+  rebuildCartView();
+  updateCartCount();
+
+
+}
+
+var addToCartView = function (cartItem, index) {
   var cart = document.getElementById('app-cart-items');
   var element = "";
 
@@ -145,8 +166,9 @@ var addToCartView = function (cartItem) {
   element +=    '<p class="cart-item-info-name">' + cartItem.name + '</p>'
   element +=    '<p class="cart-item-info-price">'+ cartItem.price +'</p>'
   element +=  '</div>'
+  element += '<button onclick="removeFromCart(this)" value="' + index + '"><i class="fa fa-times" aria-hidden="true"></i></button>'
   element += '</div>'
-
+  
   cart.innerHTML += element;
 };
 
@@ -157,11 +179,8 @@ var addToCart = function (button) {
   var item = payload.products[itemId];
   userCart.push(item);
   var recentItem = userCart.length - 1;
-  addToCartView(userCart[recentItem]);
-  var itemCount = document.getElementById('item-count');
-  itemCount.innerHTML = updateCartCount();
-
-  var cartPrice = document.getElementById('cart-price');
-  cartPrice.innerHTML = updateCartTotal();
-
+  addToCartView(userCart[recentItem], recentItem);
+  updateCartCount();
+  updateCartTotal();
 }
+
