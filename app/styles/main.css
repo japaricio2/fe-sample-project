@@ -116,8 +116,12 @@ i {
   text-decoration: underline;
 }
 
-#item-count {
-  
+#item-count-button {
+  width: 42px;
+  border-radius: 6px;
+  height: 33px;
+  color: #0a00d0;
+  background-color: white;
 }
 
 .page-title {

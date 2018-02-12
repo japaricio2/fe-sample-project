@@ -145,15 +145,14 @@ var rebuildCartView = function() {
   userCart.forEach(function(item) {
     addToCartView(item);
   });
-  updateCartTotal();
 }
+
 var removeFromCart = function(button) {
-  console.log(button.value);
   userCart.splice(button.value, 1);
   rebuildCartView();
   updateCartCount();
-
-
+  updateCartTotal();
+  
 }
 
 var addToCartView = function (cartItem, index) {
@@ -176,10 +175,14 @@ var addToCartView = function (cartItem, index) {
 var addToCart = function (button) {
   // im going to pretend this is a uid that i can use to add items to carts
   var itemId = button.value;
+  // get item from 'database'
   var item = payload.products[itemId];
+  // add to cart array
   userCart.push(item);
   var recentItem = userCart.length - 1;
+  // create cartItem, and add it to html
   addToCartView(userCart[recentItem], recentItem);
+  // update count and total
   updateCartCount();
   updateCartTotal();
 }
