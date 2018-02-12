@@ -24,7 +24,7 @@
     <div class="navbar-right">
       <ul>
         <a class="nav-button" id="cart" onclick="displayCart()" href="#">Your Cart
-          <span id="items">0</span>
+          <span id="item-count">0</span>
         </a>
       </ul>
     </div>
@@ -38,32 +38,12 @@
   <div class="container-cart">
     <div id="app-cart" class="cart">
       <h2 class="cart-title">Your Cart</h2>
-      <div class="cart-items">
-        <div class="cart-item">
-          <img class="cart-img" src="../images/618328744.png" alt="">
-          <div class="cart-item-info">
-            <p class="cart-item-info-name">Mens Fashion Shorts</p>
-            <p class="cart-item-info-price">$52.23</p>
-          </div>
-        </div>
-        <div class="cart-item">
-          <img class="cart-img" src="../images/618328744.png" alt="">
-          <div class="cart-item-info">
-            <p class="cart-item-info-name">Mens Fashion Shorts</p>
-            <p class="cart-item-info-price">$52.23</p>
-          </div>
-        </div>
-        <div class="cart-item">
-          <img class="cart-img" src="../images/618328744.png" alt="">
-          <div class="cart-item-info">
-            <p class="cart-item-info-name">Mens Fashion Shorts</p>
-            <p class="cart-item-info-price">$52.23</p>
-          </div>
-        </div>
+      <div class="cart-items" id="app-cart-items">
       </div>
+      
       <div class="cart-total">
         <h3 class="cart-total-title">Total</h3>
-        <h3 class="cart-total-price">$73</h3>
+        <h3 id="cart-price" class="cart-total-price">0</h3>
       </div>
       <button class="cart-button" onclick="displayCart()">Back</button>
     </div>
