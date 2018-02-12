@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,25 +17,57 @@
     <div class="navbar-left">
       <ul>
         <a class="nav-button nav-button-brand" href="#">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart.ly
-        </a>
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart.ly</a>
         <a class="nav-button nav-button-underline" href="#">Shop</a>
       </ul>
     </div>
     <div class="navbar-right">
       <ul>
-        <a class="nav-button" id="cart" href="#">Your Cart <span id="items">0</span></a>
+        <a class="nav-button" id="cart" onclick="displayCart()" href="#">Your Cart
+          <span id="items">0</span>
+        </a>
       </ul>
     </div>
-    
   </div>
   <!-- NAVBAR END -->
   <h1 class="page-title">Shop our featured collection</h1>
 
   <div class="collection" id="app">
   </div>
-  
-  
+
+  <div class="container-cart">
+    <div id="app-cart" class="cart">
+      <h2 class="cart-title">Your Cart</h2>
+      <div class="cart-items">
+        <div class="cart-item">
+          <img class="cart-img" src="../images/618328744.png" alt="">
+          <div class="cart-item-info">
+            <p class="cart-item-info-name">Mens Fashion Shorts</p>
+            <p class="cart-item-info-price">$52.23</p>
+          </div>
+        </div>
+        <div class="cart-item">
+          <img class="cart-img" src="../images/618328744.png" alt="">
+          <div class="cart-item-info">
+            <p class="cart-item-info-name">Mens Fashion Shorts</p>
+            <p class="cart-item-info-price">$52.23</p>
+          </div>
+        </div>
+        <div class="cart-item">
+          <img class="cart-img" src="../images/618328744.png" alt="">
+          <div class="cart-item-info">
+            <p class="cart-item-info-name">Mens Fashion Shorts</p>
+            <p class="cart-item-info-price">$52.23</p>
+          </div>
+        </div>
+      </div>
+      <div class="cart-total">
+        <h3 class="cart-total-title">Total</h3>
+        <h3 class="cart-total-price">$73</h3>
+      </div>
+      <button class="cart-button" onclick="displayCart()">Back</button>
+    </div>
+  </div>
 
   <script src="./scripts/main.js"></script>
   <script>

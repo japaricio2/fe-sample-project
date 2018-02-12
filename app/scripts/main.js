@@ -94,3 +94,22 @@ var buildCollection = function (arrItems) {
 var loadPage = function () {
   buildCollection(payload.products);
 }
+
+var toggleBlur = function() {
+  var collection = document.getElementById('app');
+  collection.classList.toggle('collection-blurred');
+}
+
+var toggleCart = function() {
+  var cart = document.getElementById('app-cart');
+  cart.classList.toggle('cart-show');
+}
+
+var displayCart = function() {
+  toggleBlur();
+  toggleCart();
+}
+
+var addToCart = function() {
+  
+}

@@ -1,3 +1,71 @@
+/* CSS BLURR */
+.collection-blurred {
+  filter: blur(80px);
+  background-color: rgb(255, 255, 255);
+}
+
+/* CART CSS */
+.container-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart.cart-show {
+  display: block;
+  position: absolute;
+  z-index: 20;
+  top: 36%;
+}
+
+.cart {
+  display: none;
+  width: 320px;
+  text-align: center;
+  color: black;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 1rem;
+}
+.cart-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  margin-bottom: 14px;
+
+}
+
+.cart-item-info {
+  font-size: .8rem;
+  text-align: right;
+  width: 100%;
+}
+
+.cart-item-info-name {
+  margin: 5px;
+}
+
+.cart-item-info-price {
+  margin: 5px;
+  font-weight: 400;
+}
+
+.cart-img {
+  width: 64px;
+  height: 42px;
+  border: solid black 1px;
+}
+
+.cart-total {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+
+
 html {
   font-family: 'Lato', sans-serif;
   color: #555555;
@@ -79,7 +147,6 @@ i {
   text-align: center;
   margin-bottom: 20px;
   font-weight: 100;
-
 }
 
 @media screen and (min-width: 480px) {
