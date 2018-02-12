@@ -1,46 +1,66 @@
 html {
   font-family: 'Lato', sans-serif;
-  color: #575757;
+  color: #555555;
   box-sizing: border-box;
+  font-weight: 100;
+  font-size: 1.3rem;
 }
 
 ul {
   margin: 0;
+  padding: 0;
+
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+i {
+  padding-right: 6px;
+}
+
+.collection {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .navbar {
   background-color: #0a00d0;
+  height: 140px;
+  padding-top: 12px;
 }
 
 .nav-button {
   color: white;
-  font-size: 1.48rem;
+  font-size: 1.3rem;
   text-decoration: none;
   display: block;
   padding: 2px 12px 2px 12px;
+  margin-bottom: 10px;
 }
 
-img {
-  width: 98%;
+.nav-button-brand {
+  font-weight: 400;
 }
 
-.collection {
-  width: 100%;
+.nav-button-underline {
+  text-decoration: underline;
+}
+
+.page-title {
+  color: #494949;
+  margin-left: 22px;
+  font-size: 1.6rem;
 }
 
 .item {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  box-shadow: 0px 0px 4px #575757; 
+  width: 86%;
+  margin-bottom: 32px;
+  box-shadow: 0px 0px 8px #9c9c9c82; 
   border-radius: 3px;
-}
-
-.item-name {
-  text-align: center;
-}
-
-.item-price {
   text-align: center;
 }
 
@@ -50,11 +70,77 @@ img {
   justify-content: center;
 }
 .cart-button {
-  width: 160px;
-  height: 42px;
+  width: 8rem;
+  height: 1.72rem;
   background-color: #FFF;
-  border-radius: 3px;
-  border: solid #575757 2px;
+  color: #9C9C9C;
+  border-radius: 6px;
+  border: solid #9c9c9c82 2px;
   text-align: center;
   margin-bottom: 20px;
+  font-weight: 100;
+
 }
+
+@media screen and (min-width: 480px) {
+  .navbar {
+    height: 48px;
+  }
+
+  .navbar-left {
+    width: 64%;
+    display: inline-block;
+    float: left;
+  }
+  
+  .navbar-right  {
+    width: 36%;
+    display: inline-block;
+    float: left;
+  }
+
+  #cart {
+    position: absolute;
+    right: 20px;
+  }
+
+  .item {
+    width: 46%;
+    margin: auto;
+    margin-bottom: 22px; 
+  }
+
+  .item-info {
+    margin: .32rem;
+  }
+
+  .nav-button {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .item {
+    width: 32%;
+    margin: auto;
+    margin-bottom: 22px; 
+  }
+
+  .cart-button {
+    height: 2.3rem;
+    width: 9rem;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .collection {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  .item {
+    width: 23%;
+    margin: auto;
+    margin-bottom: 22px; 
+  }
+}
+

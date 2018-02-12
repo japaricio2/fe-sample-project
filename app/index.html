@@ -6,6 +6,7 @@
   <title>Cart.ly - Shop</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">
   <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 
@@ -14,21 +15,31 @@
   <div class="navbar">
     <div class="navbar-left">
       <ul>
-        <a class="nav-button" href="#">Cart.ly</a>
-        <a class="nav-button" href="#">Shop</a>
+        <a class="nav-button nav-button-brand" href="#">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart.ly
+        </a>
+        <a class="nav-button nav-button-underline" href="#">Shop</a>
       </ul>
     </div>
     <div class="navbar-right">
       <ul>
-        <a class="nav-button" href="#">Your Cart</a>
-        <a class="nav-button" href="#">0</a>
+        <a class="nav-button" id="cart" href="#">Your Cart <span id="items">0</span></a>
       </ul>
     </div>
+    
   </div>
   <!-- NAVBAR END -->
+  <h1 class="page-title">Shop our featured collection</h1>
+
+  <div class="collection" id="app">
+  </div>
+  
   
 
   <script src="./scripts/main.js"></script>
+  <script>
+    window.onload = loadPage();
+  </script>
 </body>
 
 </html>
